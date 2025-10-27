@@ -102,7 +102,7 @@
   }
 
   body {
-    @apply bg-white text-black font-sans antialiased;
+    @apply bg-black text-white font-sans antialiased;
   }
 
   /* Smooth scrolling */
@@ -171,7 +171,7 @@
   }
   
   .nav-link {
-    @apply relative text-gray-800 hover:text-pulse-500 py-2 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-pulse-500 after:transition-all hover:after:w-full;
+    @apply relative text-gray-300 hover:text-pulse-400 py-2 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-pulse-500 after:transition-all hover:after:w-full;
   }
 }
 
@@ -220,4 +220,120 @@
 .parallax {
   transform: translateY(var(--parallax-y, 0));
   transition: transform 0.1s ease-out;
+}
+
+/* Dashboard conversation loop animations */
+@keyframes conversation-loop-1 {
+  0%, 10% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  15%, 45% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50%, 100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes conversation-loop-2 {
+  0%, 50% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  55%, 95% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.animate-conversation-1 {
+  animation: conversation-loop-1 12s ease-in-out infinite;
+}
+
+.animate-conversation-2 {
+  animation: conversation-loop-2 12s ease-in-out infinite;
+}
+
+/* Staggered animations for question and answer */
+@keyframes question-appear {
+  0%, 15% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  20%, 45% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50%, 100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes answer-appear {
+  0%, 25% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  30%, 45% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50%, 100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes question-appear-2 {
+  0%, 65% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  70%, 95% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes answer-appear-2 {
+  0%, 75% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  80%, 95% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.animate-question-1 {
+  animation: question-appear 12s ease-in-out infinite;
+}
+
+.animate-answer-1 {
+  animation: answer-appear 12s ease-in-out infinite;
+}
+
+.animate-question-2 {
+  animation: question-appear-2 12s ease-in-out infinite;
+}
+
+.animate-answer-2 {
+  animation: answer-appear-2 12s ease-in-out infinite;
 }

@@ -35,20 +35,28 @@ const RequestDemo = () => {
   };
 
   return (
-    <section className="w-full py-20 bg-gradient-to-b from-background to-muted/20" id="request-demo">
+    <section className="w-full py-20 sm:py-24 lg:py-28 bg-black" id="request-demo">
       <div className="container px-6 lg:px-8 mx-auto max-w-2xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-4">
-            Request <span className="text-[#3b82f6]">Access</span>
+        <div className="flex items-center justify-center gap-4 mb-8 sm:mb-10">
+          <div className="pulse-chip">
+            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">04</span>
+            <span>Get Started</span>
+          </div>
+        </div>
+        
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold mb-6">
+            <span className="text-white">Request </span>
+            <span className="bg-gradient-to-r from-pulse-400 to-purple-500 bg-clip-text text-transparent">Access</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-300">
             See how Poliara can transform your data analytics workflow
           </p>
         </div>
         
-        <form onSubmit={handleSubmit} className="bg-card p-8 rounded-2xl shadow-elegant space-y-6">
+        <form onSubmit={handleSubmit} className="bg-gray-900 border border-gray-800 p-8 rounded-2xl shadow-elegant space-y-6">
           <div className="space-y-2">
-            <label htmlFor="fullName" className="text-sm font-medium">
+            <label htmlFor="fullName" className="text-sm font-medium text-gray-300">
               Full Name *
             </label>
             <Input
@@ -59,12 +67,12 @@ const RequestDemo = () => {
               onChange={handleChange}
               placeholder="John Doe"
               required
-              className="w-full"
+              className="w-full bg-black border-gray-700 text-white placeholder-gray-500"
             />
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="email" className="text-sm font-medium">
+            <label htmlFor="email" className="text-sm font-medium text-gray-300">
               Email Address *
             </label>
             <Input
@@ -75,12 +83,12 @@ const RequestDemo = () => {
               onChange={handleChange}
               placeholder="john@company.com"
               required
-              className="w-full"
+              className="w-full bg-black border-gray-700 text-white placeholder-gray-500"
             />
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="company" className="text-sm font-medium">
+            <label htmlFor="company" className="text-sm font-medium text-gray-300">
               Company *
             </label>
             <Input
@@ -91,7 +99,7 @@ const RequestDemo = () => {
               onChange={handleChange}
               placeholder="Your Company"
               required
-              className="w-full"
+              className="w-full bg-black border-gray-700 text-white placeholder-gray-500"
             />
           </div>
 

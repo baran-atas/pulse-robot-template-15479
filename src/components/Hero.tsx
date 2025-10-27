@@ -88,18 +88,13 @@ const Hero = () => {
   
   return (
     <section 
-      className="overflow-hidden relative bg-cover" 
+      className="overflow-hidden relative bg-black min-h-screen flex items-center" 
       id="hero" 
-      style={{
-        backgroundImage: 'url("/Header-background.webp")',
-        backgroundPosition: 'center 30%', 
-        padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
-      }}
     >
       <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-20 blur-3xl rounded-full"></div>
       
       <div className="container px-4 sm:px-6 lg:px-8" ref={containerRef}>
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center relative">
           <div className="w-full lg:w-1/2">
             <div 
               className="pulse-chip mb-3 sm:mb-6 opacity-0 animate-fade-in" 
@@ -110,17 +105,18 @@ const Hero = () => {
             </div>
             
             <h1 
-              className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in" 
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight opacity-0 animate-fade-in font-display font-bold" 
               style={{ animationDelay: "0.3s" }}
             >
-              Poliara: AI-Powered<br className="hidden sm:inline" />Data Analyst Agents
+              <span className="text-white">Your New</span><br />
+              <span className="bg-gradient-to-r from-pulse-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Data Analyst</span>
             </h1>
             
             <p 
               style={{ animationDelay: "0.5s" }} 
-              className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-normal text-base sm:text-lg text-left"
+              className="mt-6 sm:mt-8 mb-8 sm:mb-10 leading-relaxed opacity-0 animate-fade-in text-gray-400 font-normal text-lg sm:text-xl text-left max-w-xl"
             >
-              Transform natural language questions into real, data-driven insights instantly.
+              Ask anything in plain English. Get instant insights from your data warehouse.
             </p>
             
             <div 
@@ -148,31 +144,108 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
-            {lottieData ? (
+          <div className="w-full lg:w-1/2 relative mt-12 lg:mt-0">
               <div className="relative z-10 animate-fade-in" style={{ animationDelay: "0.9s" }}>
-                <LottieAnimation 
-                  animationPath={lottieData} 
-                  className="w-full h-auto max-w-lg mx-auto"
-                  loop={true}
-                  autoplay={true}
-                />
+              <div className="relative">
+                {/* Glowing orb effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-pulse-500 to-purple-600 rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
+                
+                {/* Chat conversation card */}
+                <div className="relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-pulse-500/30 shadow-2xl">
+                  <div className="space-y-4">
+                    {/* Header */}
+                    <div className="flex items-center justify-between pb-4 border-b border-gray-800">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-pulse-500 to-purple-600 rounded-xl flex items-center justify-center">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <div className="text-sm font-semibold text-white">Poliara AI</div>
+                          <div className="text-xs text-green-400 flex items-center gap-1">
+                            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                            Online
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-xs text-gray-500">Just now</div>
+                    </div>
+                    
+                    {/* User message */}
+                    <div className="flex justify-end opacity-0 animate-fade-in" style={{ animationDelay: "1.2s" }}>
+                      <div className="max-w-[80%] bg-pulse-600 rounded-2xl rounded-tr-sm px-4 py-3">
+                        <p className="text-white text-sm">Which in-game events had the highest player engagement this month?</p>
+                      </div>
+                    </div>
+                    
+                    {/* AI typing indicator */}
+                    <div className="flex gap-2 items-start opacity-0 animate-fade-in" style={{ animationDelay: "1.6s" }}>
+                      <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <span className="text-white text-xs font-bold">AI</span>
+                      </div>
+                      <div className="max-w-[80%] bg-gray-800 rounded-2xl rounded-tl-sm px-4 py-3">
+                        <div className="flex gap-1">
+                          <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: "0s" }}></div>
+                          <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
+                          <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: "0.4s" }}></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* AI response */}
+                    <div className="flex gap-2 items-start opacity-0 animate-fade-in" style={{ animationDelay: "2.2s" }}>
+                      <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <span className="text-white text-xs font-bold">AI</span>
+                      </div>
+                      <div className="max-w-[80%] bg-gray-800 rounded-2xl rounded-tl-sm px-4 py-3">
+                        <p className="text-gray-300 text-sm mb-3">Analyzed player telemetry data. Top performing events:</p>
+                        <div className="space-y-2">
+                          <div className="flex items-center justify-between bg-gray-900/50 rounded-lg px-3 py-2">
+                            <span className="text-white text-sm">🎮 Battle Royale Tournament</span>
+                            <span className="text-green-400 text-sm font-semibold">2.4M players</span>
+                          </div>
+                          <div className="flex items-center justify-between bg-gray-900/50 rounded-lg px-3 py-2">
+                            <span className="text-white text-sm">🎁 Double XP Weekend</span>
+                            <span className="text-green-400 text-sm font-semibold">1.8M players</span>
+                          </div>
+                          <div className="flex items-center justify-between bg-gray-900/50 rounded-lg px-3 py-2">
+                            <span className="text-white text-sm">🏆 Season Pass Launch</span>
+                            <span className="text-green-400 text-sm font-semibold">1.5M players</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            ) : (
-              <>
-              <div className="absolute inset-0 bg-dark-900 rounded-2xl sm:rounded-3xl -z-10 shadow-xl"></div>
-              <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
-                <img 
-                  ref={imageRef} 
-                  src="/lovable-uploads/5663820f-6c97-4492-9210-9eaa1a8dc415.png" 
-                  alt="Poliara Data Analytics Platform" 
-                  className="w-full h-auto object-cover transition-transform duration-500 ease-out" 
-                  style={{ transformStyle: 'preserve-3d' }} 
-                />
-                <div className="absolute inset-0" style={{ backgroundImage: 'url("/hero-image.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'overlay', opacity: 0.5 }}></div>
+            </div>
+          </div>
+          
+          {/* Trusted by badge - positioned at very bottom, desktop only */}
+          <div className="hidden xl:block fixed bottom-8 left-8 opacity-0 animate-fade-in z-10" style={{ animationDelay: "1.2s" }}>
+            <div className="flex items-center gap-3 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-full px-4 py-2.5">
+              <div className="flex -space-x-2">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-pulse-500 to-purple-600 border-2 border-gray-900 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-gray-900 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 border-2 border-gray-900 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
               </div>
-              </>
-            )}
+              <div className="text-xs text-gray-400 font-medium">
+                Trusted by <span className="text-white">Tier 1</span> companies
+              </div>
+            </div>
           </div>
         </div>
       </div>

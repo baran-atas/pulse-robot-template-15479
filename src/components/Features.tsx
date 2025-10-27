@@ -40,17 +40,17 @@ const FeatureCard = ({ icon, title, description, index }: FeatureCardProps) => {
     <div 
       ref={cardRef}
       className={cn(
-        "feature-card glass-card opacity-0 p-4 sm:p-6",
-        "lg:hover:bg-gradient-to-br lg:hover:from-white lg:hover:to-pulse-50",
+        "feature-card opacity-0 p-4 sm:p-6 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl",
+        "lg:hover:bg-gradient-to-br lg:hover:from-gray-800 lg:hover:to-gray-900 lg:hover:border-pulse-500/30",
         "transition-all duration-300"
       )}
       style={{ animationDelay: `${0.1 * index}s` }}
     >
-      <div className="rounded-full bg-pulse-50 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-pulse-500 mb-4 sm:mb-5">
+      <div className="rounded-full bg-pulse-500/20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-pulse-400 mb-4 sm:mb-5">
         {icon}
       </div>
-      <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{title}</h3>
-      <p className="text-gray-600 text-sm sm:text-base">{description}</p>
+      <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-white">{title}</h3>
+      <p className="text-gray-400 text-sm sm:text-base">{description}</p>
     </div>
   );
 };
@@ -88,16 +88,19 @@ const Features = () => {
   }, []);
   
   return (
-    <section className="py-12 sm:py-16 md:py-20 pb-0 relative bg-gray-50" id="features" ref={sectionRef}>
+    <section className="py-20 sm:py-24 lg:py-28 relative bg-black" id="features" ref={sectionRef}>
       <div className="section-container">
-        <div className="text-center mb-10 sm:mb-16">
-          <div className="pulse-chip mx-auto mb-3 sm:mb-4 opacity-0 fade-in-element">
+        <div className="text-center mb-16 sm:mb-20">
+          <div className="pulse-chip mx-auto mb-8 sm:mb-10 opacity-0 fade-in-element">
+            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">03</span>
             <span>Features</span>
           </div>
-          <h2 className="section-title mb-3 sm:mb-4 opacity-0 fade-in-element">
-            Advanced Data Intelligence, <br className="hidden sm:block" />Real-Time Insights
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold tracking-tight mb-6 opacity-0 fade-in-element">
+            <span className="text-white">Advanced Data Intelligence, </span>
+            <br className="hidden sm:block" />
+            <span className="bg-gradient-to-r from-pulse-400 to-purple-500 bg-clip-text text-transparent">Real-Time Insights</span>
           </h2>
-          <p className="section-subtitle mx-auto opacity-0 fade-in-element">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto opacity-0 fade-in-element">
             Built with cutting-edge AI to understand your data, learn from patterns, and adapt to your analytics needs.
           </p>
         </div>
