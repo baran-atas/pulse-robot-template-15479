@@ -54,11 +54,7 @@ const Navbar = () => {
           }}
           aria-label="Poliara"
         >
-          <img 
-            src="/logo.svg" 
-            alt="Poliara Logo" 
-            className="h-7 sm:h-8" 
-          />
+          <span className="text-2xl font-bold text-gray-900">Poliara</span>
         </a>
 
         {/* Desktop Navigation */}
