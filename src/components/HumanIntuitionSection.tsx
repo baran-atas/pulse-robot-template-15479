@@ -10,20 +10,20 @@ const HumanIntuitionSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-left">
             <div className="pulse-chip mb-4">
-              <span>Human-Like Intuition</span>
+              <span>AI-Powered Intelligence</span>
             </div>
-            <h2 className="section-title mb-6">Beyond algorithms to true understanding</h2>
+            <h2 className="section-title mb-6">Beyond queries to true data intelligence</h2>
             <p className="text-lg text-gray-700 mb-6">
-              Atlas goes beyond programmed responses to develop contextual awareness and
-              adaptive learning patterns that mirror human intuition. This enables natural
-              interactions that feel like working with a human colleague rather than a machine.
+              Poliara goes beyond simple query execution to develop contextual awareness and
+              adaptive learning patterns that understand your business logic. This enables natural
+              interactions that feel like working with a senior data analyst rather than a database.
             </p>
             <ul className="space-y-4">
               {[
-                "Learns from human demonstrations and refines its approach over time",
-                "Anticipates needs based on situational awareness and past interactions",
-                "Adapts to changing environments without explicit reprogramming",
-                "Makes decisions with nuanced understanding of human preferences"
+                "Learns from analyst queries and refines SQL generation over time",
+                "Anticipates insights based on business context and historical patterns",
+                "Adapts to schema changes without manual reconfiguration",
+                "Provides explanations with transparent query logic and data lineage"
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
                   <div className="mr-3 text-pulse-500">

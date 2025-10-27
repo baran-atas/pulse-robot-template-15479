@@ -55,19 +55,19 @@ const HowItWorks = () => {
     {
       number: "02",
       title: "Personalization",
-      description: "We'll work with you to customize Atlas to your specific needs and preferences.",
+      description: "We'll work with you to customize Poliara to your specific data sources and analytics needs.",
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
     },
     {
       number: "03",
-      title: "Integration",
-      description: "Atlas arrives at your location and is integrated into your living or working environment.",
+      title: "Data Integration",
+      description: "Poliara connects to your data warehouse and begins learning your data structures and business context.",
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
     },
     {
       number: "04",
       title: "Adaptation",
-      description: "Through daily interaction, Atlas learns and adapts to your routines, preferences, and needs.",
+      description: "Through continuous use, Poliara learns your team's query patterns and refines its analytical capabilities.",
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
     }
   ];
@@ -118,9 +118,9 @@ const HowItWorks = () => {
           <div className="pulse-chip mx-auto mb-4">
             <span>Process</span>
           </div>
-          <h2 className="section-title mb-4">How Atlas Integrates Into Your Life</h2>
+          <h2 className="section-title mb-4">How Poliara Integrates With Your Data</h2>
           <p className="section-subtitle mx-auto">
-            A seamless four-step process from request to full integration.
+            A seamless four-step process from request to actionable insights.
           </p>
         </div>
         

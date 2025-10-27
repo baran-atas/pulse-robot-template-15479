@@ -18,7 +18,7 @@ const Newsletter = () => {
     setTimeout(() => {
       toast({
         title: "Thank you for subscribing!",
-        description: "You'll receive updates about Atlas soon."
+        description: "You'll receive updates about Poliara soon."
       });
       setEmail("");
       setIsSubmitting(false);
