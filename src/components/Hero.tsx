@@ -128,8 +128,8 @@ const Hero = () => {
               style={{ animationDelay: "0.7s" }}
             >
               <a 
-                href="#get-access" 
-                className="flex items-center justify-center group w-full sm:w-auto text-center" 
+                href="#request-demo" 
+                className="flex items-center justify-center group w-full sm:w-auto text-center"
                 style={{
                   backgroundColor: '#FE5C02',
                   borderRadius: '1440px',
