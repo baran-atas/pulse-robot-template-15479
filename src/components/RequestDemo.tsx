@@ -39,7 +39,7 @@ const RequestDemo = () => {
       <div className="container px-6 lg:px-8 mx-auto max-w-2xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-4">
-            Request <span className="text-[#FC4D0A]">Access</span>
+            Request <span className="text-[#3b82f6]">Access</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             See how Poliara can transform your data analytics workflow
