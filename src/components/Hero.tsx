@@ -224,26 +224,8 @@ const Hero = () => {
           
           {/* Trusted by badge - positioned at very bottom, desktop only */}
           <div className="hidden xl:block fixed bottom-8 left-8 opacity-0 animate-fade-in z-10" style={{ animationDelay: "1.2s" }}>
-            <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-xl px-4 py-2.5">
-              <div className="flex items-center gap-3">
-                <span className="text-xs text-gray-500 font-medium">Trusted by</span>
-                <div className="flex items-center gap-3">
-                  {/* Midas Games - Minimal text logo */}
-                  <a href="https://midas.gs/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
-                    <span className="text-[10px] font-bold tracking-wide" style={{ color: '#FFD700' }}>MIDAS</span>
-                  </a>
-                  <div className="w-px h-3 bg-gray-700"></div>
-                  {/* Spektra Games - Minimal text logo */}
-                  <a href="https://spektra.games/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
-                    <span className="text-[10px] font-bold tracking-wide text-white">SPEKTRA</span>
-                  </a>
-                  <div className="w-px h-3 bg-gray-700"></div>
-                  {/* Glyde Games - Minimal text logo */}
-                  <a href="https://glydegames.com/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
-                    <span className="text-[10px] font-bold tracking-wide text-white">GLYDE</span>
-                  </a>
-                </div>
-              </div>
+            <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-xl px-4 py-2">
+              <span className="text-xs text-gray-400 font-medium">Trusted by top tier gaming companies</span>
             </div>
           </div>
         </div>
