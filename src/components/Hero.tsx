@@ -93,11 +93,11 @@ const Hero = () => {
     >
       <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-20 blur-3xl rounded-full"></div>
       
-      <div className="container px-4 sm:px-6 lg:px-8" ref={containerRef}>
+      <div className="container px-4 sm:px-6 lg:px-8 pt-8 sm:pt-0" ref={containerRef}>
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center relative">
           <div className="w-full lg:w-1/2">
             <div 
-              className="pulse-chip mb-4 sm:mb-6 opacity-0 animate-fade-in" 
+              className="pulse-chip mb-4 sm:mb-6 opacity-0 animate-fade-in hidden sm:flex" 
               style={{ animationDelay: "0.1s" }}
             >
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">01</span>
