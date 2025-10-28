@@ -96,17 +96,9 @@ const Hero = () => {
       <div className="container px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0" ref={containerRef}>
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center relative">
           <div className="w-full lg:w-1/2">
-            <div 
-              className="pulse-chip mb-4 sm:mb-6 opacity-0 animate-fade-in hidden sm:flex" 
-              style={{ animationDelay: "0.1s" }}
-            >
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">01</span>
-              <span>Purpose</span>
-            </div>
-            
             <h1 
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight opacity-0 animate-fade-in font-display font-bold" 
-              style={{ animationDelay: "0.3s" }}
+              style={{ animationDelay: "0.1s" }}
             >
               <span className="text-white">Your New</span><br />
               <span className="bg-gradient-to-r from-pulse-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Data Analyst</span>
