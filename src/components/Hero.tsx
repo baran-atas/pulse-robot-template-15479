@@ -224,26 +224,47 @@ const Hero = () => {
           
           {/* Trusted by badge - positioned at very bottom, desktop only */}
           <div className="hidden xl:block fixed bottom-8 left-8 opacity-0 animate-fade-in z-10" style={{ animationDelay: "1.2s" }}>
-            <div className="flex items-center gap-3 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-full px-4 py-2.5">
-              <div className="flex -space-x-2">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-pulse-500 to-purple-600 border-2 border-gray-900 flex items-center justify-center">
-                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                </div>
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-gray-900 flex items-center justify-center">
-                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                </div>
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 border-2 border-gray-900 flex items-center justify-center">
-                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                </div>
+            <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl px-5 py-3">
+              <div className="text-xs text-gray-500 font-medium mb-3">
+                Trusted by Tier 1 gaming companies
               </div>
-              <div className="text-xs text-gray-400 font-medium">
-                Trusted by <span className="text-white">Tier 1</span> companies
+              <div className="flex items-center gap-4">
+                {/* Midas Games Logo */}
+                <a href="https://midas.gs/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110">
+                  <svg className="h-6 w-auto" viewBox="0 0 100 30" fill="none">
+                    <text x="0" y="22" className="text-xl font-bold" fill="url(#midas-gradient)">MIDAS</text>
+                    <defs>
+                      <linearGradient id="midas-gradient" x1="0" y1="0" x2="100" y2="0">
+                        <stop offset="0%" stopColor="#FFD700" />
+                        <stop offset="100%" stopColor="#FFA500" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </a>
+                
+                {/* Spektra Games Logo */}
+                <a href="https://spektra.games/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110">
+                  <svg className="h-6 w-auto" viewBox="0 0 120 30" fill="none">
+                    <circle cx="10" cy="15" r="3" fill="#FF6B6B" />
+                    <circle cx="18" cy="15" r="3" fill="#4ECDC4" />
+                    <circle cx="26" cy="15" r="3" fill="#FFE66D" />
+                    <text x="32" y="21" className="text-sm font-semibold" fill="#FFFFFF">SPEKTRA</text>
+                  </svg>
+                </a>
+                
+                {/* Glyde Games Logo */}
+                <a href="https://glydegames.com/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110">
+                  <svg className="h-6 w-auto" viewBox="0 0 100 30" fill="none">
+                    <path d="M5 15 Q10 5, 15 15 T25 15" stroke="url(#glyde-gradient)" strokeWidth="3" fill="none" />
+                    <text x="30" y="21" className="text-sm font-semibold" fill="#FFFFFF">GLYDE</text>
+                    <defs>
+                      <linearGradient id="glyde-gradient" x1="0" y1="0" x2="25" y2="0">
+                        <stop offset="0%" stopColor="#667EEA" />
+                        <stop offset="100%" stopColor="#764BA2" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
