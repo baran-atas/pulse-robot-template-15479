@@ -7,6 +7,7 @@ import Features from "@/components/Features";
 import Newsletter from "@/components/Newsletter";
 import RequestDemo from "@/components/RequestDemo";
 import Footer from "@/components/Footer";
+import LoadingScreen from "@/components/LoadingScreen";
 
 const Index = () => {
   // Initialize intersection observer to detect when elements enter viewport
@@ -55,17 +56,20 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main className="space-y-0"> {/* No space between sections for seamless scroll */}
-        <Hero />
-        <ImageShowcaseSection />
-        <Features />
-        <RequestDemo />
-        <Newsletter />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <LoadingScreen />
+      <div className="min-h-screen">
+        <Navbar />
+        <main className="space-y-0"> {/* No space between sections for seamless scroll */}
+          <Hero />
+          <ImageShowcaseSection />
+          <Features />
+          <RequestDemo />
+          <Newsletter />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 
