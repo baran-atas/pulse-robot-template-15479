@@ -97,7 +97,7 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center relative">
           <div className="w-full lg:w-1/2">
             <div 
-              className="pulse-chip mb-3 sm:mb-6 opacity-0 animate-fade-in" 
+              className="pulse-chip mb-4 sm:mb-6 opacity-0 animate-fade-in" 
               style={{ animationDelay: "0.1s" }}
             >
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">01</span>
@@ -105,7 +105,7 @@ const Hero = () => {
             </div>
             
             <h1 
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight opacity-0 animate-fade-in font-display font-bold" 
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight opacity-0 animate-fade-in font-display font-bold" 
               style={{ animationDelay: "0.3s" }}
             >
               <span className="text-white">Your New</span><br />
