@@ -224,47 +224,25 @@ const Hero = () => {
           
           {/* Trusted by badge - positioned at very bottom, desktop only */}
           <div className="hidden xl:block fixed bottom-8 left-8 opacity-0 animate-fade-in z-10" style={{ animationDelay: "1.2s" }}>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl px-5 py-3">
-              <div className="text-xs text-gray-500 font-medium mb-3">
-                Trusted by Tier 1 gaming companies
-              </div>
-              <div className="flex items-center gap-4">
-                {/* Midas Games Logo */}
-                <a href="https://midas.gs/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110">
-                  <svg className="h-6 w-auto" viewBox="0 0 100 30" fill="none">
-                    <text x="0" y="22" className="text-xl font-bold" fill="url(#midas-gradient)">MIDAS</text>
-                    <defs>
-                      <linearGradient id="midas-gradient" x1="0" y1="0" x2="100" y2="0">
-                        <stop offset="0%" stopColor="#FFD700" />
-                        <stop offset="100%" stopColor="#FFA500" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </a>
-                
-                {/* Spektra Games Logo */}
-                <a href="https://spektra.games/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110">
-                  <svg className="h-6 w-auto" viewBox="0 0 120 30" fill="none">
-                    <circle cx="10" cy="15" r="3" fill="#FF6B6B" />
-                    <circle cx="18" cy="15" r="3" fill="#4ECDC4" />
-                    <circle cx="26" cy="15" r="3" fill="#FFE66D" />
-                    <text x="32" y="21" className="text-sm font-semibold" fill="#FFFFFF">SPEKTRA</text>
-                  </svg>
-                </a>
-                
-                {/* Glyde Games Logo */}
-                <a href="https://glydegames.com/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110">
-                  <svg className="h-6 w-auto" viewBox="0 0 100 30" fill="none">
-                    <path d="M5 15 Q10 5, 15 15 T25 15" stroke="url(#glyde-gradient)" strokeWidth="3" fill="none" />
-                    <text x="30" y="21" className="text-sm font-semibold" fill="#FFFFFF">GLYDE</text>
-                    <defs>
-                      <linearGradient id="glyde-gradient" x1="0" y1="0" x2="25" y2="0">
-                        <stop offset="0%" stopColor="#667EEA" />
-                        <stop offset="100%" stopColor="#764BA2" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </a>
+            <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-xl px-4 py-2.5">
+              <div className="flex items-center gap-3">
+                <span className="text-xs text-gray-500 font-medium">Trusted by</span>
+                <div className="flex items-center gap-3">
+                  {/* Midas Games - Minimal text logo */}
+                  <a href="https://midas.gs/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                    <span className="text-[10px] font-bold tracking-wide" style={{ color: '#FFD700' }}>MIDAS</span>
+                  </a>
+                  <div className="w-px h-3 bg-gray-700"></div>
+                  {/* Spektra Games - Minimal text logo */}
+                  <a href="https://spektra.games/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                    <span className="text-[10px] font-bold tracking-wide text-white">SPEKTRA</span>
+                  </a>
+                  <div className="w-px h-3 bg-gray-700"></div>
+                  {/* Glyde Games - Minimal text logo */}
+                  <a href="https://glydegames.com/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                    <span className="text-[10px] font-bold tracking-wide text-white">GLYDE</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
