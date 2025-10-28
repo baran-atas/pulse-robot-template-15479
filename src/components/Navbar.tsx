@@ -54,25 +54,11 @@ const Navbar = () => {
           }}
           aria-label="Poliara"
         >
-          <svg className="w-8 h-8" viewBox="0 0 32 32" fill="none">
-            <path d="M8 12L16 8L24 12L16 16L8 12Z" fill="url(#grad1)" />
-            <path d="M8 12V20L16 24V16L8 12Z" fill="url(#grad2)" opacity="0.8" />
-            <path d="M24 12V20L16 24V16L24 12Z" fill="url(#grad3)" opacity="0.6" />
-            <defs>
-              <linearGradient id="grad1" x1="8" y1="8" x2="24" y2="16">
-                <stop offset="0%" stopColor="#3b82f6" />
-                <stop offset="100%" stopColor="#8b5cf6" />
-              </linearGradient>
-              <linearGradient id="grad2" x1="8" y1="12" x2="16" y2="24">
-                <stop offset="0%" stopColor="#3b82f6" />
-                <stop offset="100%" stopColor="#6366f1" />
-              </linearGradient>
-              <linearGradient id="grad3" x1="24" y1="12" x2="16" y2="24">
-                <stop offset="0%" stopColor="#8b5cf6" />
-                <stop offset="100%" stopColor="#a855f7" />
-              </linearGradient>
-            </defs>
-          </svg>
+          <img 
+            src="/poliara-logo.png" 
+            alt="Poliara Logo" 
+            className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+          />
           <span className="text-2xl font-bold text-white">Poliara</span>
         </a>
 

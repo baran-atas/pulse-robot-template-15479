@@ -116,17 +116,12 @@
   }
 }
 
-/* Robot Showcase Section */
-.robot-image-container {
+/* Data Visualization Section */
+.data-viz-container {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   transition: transform 0.5s ease;
-}
-
-.robot-image-container:hover {
-  transform: scale(1.02);
 }
 
 .feature-item {
@@ -144,7 +139,7 @@
 
 /* Enhanced mobile optimizations */
 @media (max-width: 640px) {
-  .robot-image-container {
+  .data-viz-container {
     border-radius: 16px;
   }
   

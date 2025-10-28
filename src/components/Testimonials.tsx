@@ -10,27 +10,27 @@ interface TestimonialProps {
 }
 
 const testimonials: TestimonialProps[] = [{
-  content: "Atlas transformed our production line, handling repetitive tasks while our team focuses on innovation. 30% increase in output within three months.",
+  content: "Poliara transformed how our team accesses data. Questions that took hours now get answered in seconds. Our data team can finally focus on strategy instead of writing SQL.",
   author: "Sarah Chen",
-  role: "VP of Operations, Axion Manufacturing",
+  role: "VP of Analytics, TechCorp",
   gradient: "from-blue-700 via-indigo-800 to-purple-900",
   backgroundImage: "/background-section1.png"
 }, {
-  content: "Implementing Atlas in our fulfillment centers reduced workplace injuries by 40% while improving order accuracy. The learning capabilities are remarkable.",
+  content: "The learning curve was zero. Our non-technical teams started getting insights immediately. Poliara understands context and asks clarifying questions when needed.",
   author: "Michael Rodriguez",
-  role: "Director of Logistics, GlobalShip",
+  role: "Director of Operations, DataFlow Inc.",
   gradient: "from-indigo-900 via-purple-800 to-orange-500",
   backgroundImage: "/background-section2.png"
 }, {
-  content: "Atlas adapted to our lab protocols faster than any system we've used. It's like having another researcher who never gets tired and maintains perfect precision.",
+  content: "We've tried several analytics tools, but Poliara's natural language interface is game-changing. It's like having a senior analyst available 24/7 for every team member.",
   author: "Dr. Amara Patel",
-  role: "Lead Scientist, BioAdvance Research",
+  role: "Head of Data Science, InsightLabs",
   gradient: "from-purple-800 via-pink-700 to-red-500",
   backgroundImage: "/background-section3.png"
 }, {
-  content: "As a mid-size business, we never thought advanced robotics would be accessible to us. Atlas changed that equation entirely with its versatility and ease of deployment.",
+  content: "As a growing company, democratizing data access was crucial. Poliara made enterprise-level analytics accessible across our entire organization without overwhelming our data team.",
   author: "Jason Lee",
-  role: "CEO, Innovative Solutions Inc.",
+  role: "CEO, GrowthMetrics",
   gradient: "from-orange-600 via-red-500 to-purple-600",
   backgroundImage: "/background-section1.png"
 }];
